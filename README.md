@@ -70,6 +70,11 @@ Thank you for your participation and good luck!
 
 ## **Resources**
 
+## **Official SDKs**
+
+- [Xahau JS/TS](https://github.com/Xahau/xahau.js)
+- [Xahau PY](https://github.com/Xahau/xahau-py)
+
 ## **Official Documentation/Tools**
 - [Xahau Documentation](https://docs.xahau.network/)
 - [Hooks Documentation](https://docs.xahau.network/readme-1)
