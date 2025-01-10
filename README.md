@@ -30,7 +30,7 @@ This contest invites you to innovate, build, and showcase your creativity using 
 
 - **Start Date**: January 13, 2024 12:00CET
 - **End Date**: January 31, 2024 23:59CET
-- 
+
 ## **Winners Announcement**
 - **Date**: February 7, 2024
 
@@ -73,8 +73,8 @@ Thank you for your participation and good luck!
 ## **Official Documentation/Tools**
 - [Xahau Documentation](https://docs.xahau.network/)
 - [Hooks Documentation](https://docs.xahau.network/readme-1)
-- [Hooks Builder](https://builder.xahau.network/)
-- [Hooks Toolkit: A comprehensive library for building and testing Hooks (This is the best place to start).](https://hooks-toolkit.com/)
+- [Hooks Builder: Learn how to use Hooks with this online development environment](https://builder.xahau.network/)
+- [Hooks Toolkit: A comprehensive library for building and testing Hooks](https://hooks-toolkit.com/)
 - [XHS-Library: A collection of Hooks, a perfect way to learn how to code Hooks](https://github.com/Transia-RnD/xhs-library)
 - [How to Build a Hook from Scratch: step-by-step video guide to implementing Hooks in your project](https://www.youtube.com/watch?v=XgQx49K81do)
 - [JS Hooks Tutorial](https://www.youtube.com/watch?v=uX7bR2VZAp8)
