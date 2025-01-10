@@ -28,11 +28,11 @@ This contest invites you to innovate, build, and showcase your creativity using 
 
 ## **Event Dates**
 
-- **Start Date**: January 13, 2024 12:00CET
-- **End Date**: January 31, 2024 23:59CET
+- **Start Date**: January 13, 2025 12:00CET
+- **End Date**: January 31, 2025 23:59CET
 
 ## **Winners Announcement**
-- **Date**: February 7, 2024
+- **Date**: February 7, 2025
 
 ## **Judging Panel**
 - **Richard Holland** | @[RichardXRPL](https://x.com/RichardXRPL) (XRPL-Labs)
