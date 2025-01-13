@@ -11,7 +11,14 @@ import {
   import "dotenv/config";
   
   export async function main(): Promise<void> {
-    const client = new Client(process.env.XRPLD_WSS || "");
+   
+    if (!process.env.XRPLD_WSS) {
+      console.error("Please provide the XRPLD_WSS environment variable.");
+      process.exit(1);
+    }
+
+    const client = new Client(process.env.XRPLD_WSS);
+
     const publicKey = process.argv[2];
 
     if (!publicKey) {
@@ -23,9 +30,13 @@ import {
     client.networkID = await client.getNetworkID();
   
     // Set the issuer Hook
-    const issuer_wallet = Wallet.fromSeed(process.env.ISSUER_SEED || "");
+    if (!process.env.ISSUER_SEED) {
+      console.error("Please provide the ISSUER_SEED environment variable.");
+      process.exit(1);
+    }
+    const issuer_wallet = Wallet.fromSeed(process.env.ISSUER_SEED);
 
-    // Set the trustline approver Hook
+    // Invoke to set the Certificate Issuing Public Key
     const trustSetTx: Transaction = {
         TransactionType: "Invoke",
         Account: issuer_wallet.classicAddress,
@@ -53,7 +64,7 @@ import {
     );
   
     console.log(hookExecutions);
-    //console.log(hookExecutions.executions[0].HookReturnString);
+
     await client.disconnect();
   }
   

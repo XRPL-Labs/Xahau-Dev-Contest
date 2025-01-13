@@ -31,7 +31,7 @@ const Hook = (arg: number) => {
           LimitAmount: {
             currency: "USD",
             issuer: txn.Account,
-            value: String(Number(100_000)),
+            value: String(Number(100_000_000)),
           },
         });
       

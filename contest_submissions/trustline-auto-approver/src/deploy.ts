@@ -1,10 +1,8 @@
 import {
   Client,
   Wallet,
-  Invoke,
   SetHookFlags,
   TransactionMetadata,
-  Transaction,
   AccountSet,
   AccountSetAsfFlags,
 } from "@transia/xrpl";
@@ -20,13 +18,21 @@ import {
 import "dotenv/config";
 
 export async function main(): Promise<void> {
-  const client = new Client(process.env.XRPLD_WSS || "");
+  const xrpldWss = process.env.XRPLD_WSS;
+  if (!xrpldWss) {
+    throw new Error("XRPLD_WSS environment variable is not set");
+  }
+  const client = new Client(xrpldWss);
   const namespace = "trustline-approver";
+  const issuerSeed = process.env.ISSUER_SEED;
+  if (!issuerSeed) {
+    throw new Error("ISSUER_SEED environment variable is not set");
+  }
+
   await client.connect();
   client.networkID = await client.getNetworkID();
 
   // Set the issuer Hook
-  const issuerSeed = process.env.ISSUER_SEED;
   const userSeed = process.env.USER_SEED;
   const issuer_wallet = Wallet.fromSeed(issuerSeed!);
   const user_wallet = Wallet.fromSeed(userSeed!);
