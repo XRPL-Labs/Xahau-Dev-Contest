@@ -4,7 +4,7 @@
 With Authorized Trustlines, cold wallets can't be that *cold* as they need to come online to approve trustlines.
 
 ## Idea
-A weak execution of the issuer hook in a post `ttTrustSettransaction` that auto-approves trustlines verifying a signature (by an issuing entity or authority).
+A weak execution of the issuer hook in a post `ttTrustSettransaction` that auto-approves trustlines after verifying a signature (by an issuing entity or authority).
 
 If this check passes, a `TrustSet` transaction from the issuer to the user would be emitted.
 
