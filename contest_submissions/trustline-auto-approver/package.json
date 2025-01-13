@@ -1,0 +1,30 @@
+{
+  "name": "hooks-toolkit-init-js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "hooks-toolkit-cli compile-js contracts/trustline-approver.ts build/",
+    "deploy": "yarn run build && ts-node src/deploy.ts",
+    "certificate": "ts-node src/certificate.ts",
+    "update-key": "ts-node src/update.ts",
+    "trust-set": "ts-node src/trustset.ts"
+  },
+  "author": {
+    "name": "Denis Angell",
+    "url": "https://github.com/dangell7"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@transia/hooks-toolkit": "^2.0.0-alpha.3",
+    "dotenv": "^16.3.1",
+    "events": "^3.3.0",
+    "jshooks-api": "^1.0.5",
+    "stream": "^0.0.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
