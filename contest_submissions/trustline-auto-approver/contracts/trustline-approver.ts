@@ -1,6 +1,6 @@
 import { DOESNT_EXIST, INTERNAL_ERROR, NOT_AUTHORIZED, SUCCESS } from "jshooks-api";
 import { Transaction } from '@transia/xahau-models'
-import { encodeString, getOtxnParam, uint8ArrayToString } from './helpers'
+import { encodeString, getOtxnParam, stringToHex, uint8ArrayToString } from './helpers'
 
 const Hook = (arg: number) => {
   // Get the transaction
@@ -20,8 +20,9 @@ const Hook = (arg: number) => {
       }
 
       // TODO!: Message format KYC_APPROVED|<address>
+      const messageToVerify = stringToHex(`KYC_APPROVED|${txn.Account}`);
       const verification = util_verify(
-        "4b59435f415050524f5645447c7277656b6657344d695335795a6a5841535242447a7a505057594b7548764b503745",
+        messageToVerify,
         txn.Memos?.[0].Memo.MemoData as string,
         uint8ArrayToString(new Uint8Array(state(encodeString("K")) as number[])).toUpperCase()
       );

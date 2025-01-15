@@ -26,10 +26,11 @@ export function decodeJson(a: number[]): Record<string, any> {
     }
     return s.toUpperCase();
   }
-  
-  type MyData = {
-    id: string;
-  };
+
+  export function stringToHex(str: string): string {
+    const bufferText = Buffer.from(str, "utf8");
+    return bufferText.toString("hex").toUpperCase();
+  }
   
   export function hexToUInt64(hex: string): any {
     return BigInt(`0x${hex}`);
