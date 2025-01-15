@@ -13,7 +13,15 @@ const keypair = {
 };
 
 export async function main(): Promise<void> {
-    const message = "KYC_APPROVED";
+
+    const address = process.argv[2];
+
+    if (!address) {
+        console.error("Please provide an address as an argument.");
+        process.exit(1);
+    };
+
+    const message = `KYC_APPROVED|${address}`;
     const messageHex = stringToHex(message);
     const signature = sign(messageHex, keypair.privateKey);
     console.log("Signature:", signature);

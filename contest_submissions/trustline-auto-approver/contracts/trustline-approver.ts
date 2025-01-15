@@ -19,8 +19,9 @@ const Hook = (arg: number) => {
         return rollback(`Trustline-Approver: Please initialize the hook with the Certificate issuer Public Key.`, DOESNT_EXIST);
       }
 
+      // TODO!: Message format KYC_APPROVED|<address>
       const verification = util_verify(
-        "4B59435F415050524F564544",
+        "4b59435f415050524f5645447c7277656b6657344d695335795a6a5841535242447a7a505057594b7548764b503745",
         txn.Memos?.[0].Memo.MemoData as string,
         uint8ArrayToString(new Uint8Array(state(encodeString("K")) as number[])).toUpperCase()
       );
