@@ -179,6 +179,7 @@ The Vault ID is use to take over a vault, so we use the Vault ID as Invoice ID. 
 Take over transaction example:
 
 {
+
   "TransactionType": "Payment",
   
   "Account": "r4VzEm7Jbgg3QkPBgMscoppz6JuzK2Jkbd",
@@ -190,6 +191,7 @@ Take over transaction example:
   "Amount": "2000000",
   
   "NetworkID": 21337
+  
 }
 
 "Account": "r4VzEm7Jbgg3QkPBgMscoppz6JuzK2Jkbd" = is the user non-owner of the vault that wants to take over the vaoult.
@@ -287,6 +289,10 @@ The exchange rate between XAH and XAI USD stablecoin is the limit set on a trust
 ### What happens when XAH price changes
 
 In this case we can't show what happens if the price goes up or down because the oracle shows the current XAH price, which is relatively stable, and we can't modifiy it for demostration purposes. To se how the behavior the protocol has when XAH price goes down see EXAMPLE 1 where we change oracle XAH price from 33 XAI USD to 10 XAI USD. When data is available for Example 2 we will update this section.
+
+## Online demo
+
+Online demo (pending...): https://skunk-proper-smoothly.ngrok-free.app/tools/xaiprotocol/xaiprotocol
 
 ## Mandatory Tweets 🐦
 
