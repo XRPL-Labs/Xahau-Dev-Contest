@@ -39,4 +39,10 @@ Submissions will be shared and amplified by the @XahauNetwork account, giving yo
 
 ## Additional Information 📄
 
-Any additional information, notes, or comments you want to include with your submission.
+### Acknowledgements
+
+@ekiserrepe, @XRPLWin, @angell_denis, @WietseWind, @nixerFFM
+
+### Credit
+
+This project is based on Richard Holland's peggy hook from 2021.
