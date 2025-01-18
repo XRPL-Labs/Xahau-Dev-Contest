@@ -6,8 +6,8 @@
 
 ## Project Details 🛠
 
-- [ ] **Included Project Files (code, documentation, etc.)**
-- [ ] **Detailed `README.md` file containing:**
+- [x] **Included Project Files (code, documentation, etc.)**
+- [x] **Detailed `README.md` file containing:**
   - **Project Description**
   - **Instructions on How to Use the Project**
   - **Integration Details for Xahau Hooks**
@@ -23,7 +23,7 @@ Explain how your project leverages Xahau or integrates Hooks. Provide details th
 ## Mandatory Tweets 🐦
 
 Submissions will be shared and amplified by the @XahauNetwork account, giving your work additional visibility within the community.
-- [ ] **First Mandatory Tweet** announcing your participation:
+- [x] **First Mandatory Tweet** announcing your participation:
 
   - **Link to Tweet:** [https://x.com/ainittomai/status/1878919910472270251]
 
