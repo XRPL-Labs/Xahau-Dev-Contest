@@ -10,7 +10,7 @@
 - [ ] **Detailed `README.md` file containing:**
   - **Project Description**
   - **Instructions on How to Use the Project**
-  - **Integration Details for Xahau Hooks - if used**
+  - **Integration Details for Xahau Hooks**
 
 ## How to Use the Project 🚀
 
