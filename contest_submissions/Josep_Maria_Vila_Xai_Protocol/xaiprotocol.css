@@ -69,15 +69,15 @@ html {
   font-weight: 300;
   background: url("./static/6.png") center center/cover;
   width: auto;
-  color: whitesmoke;
+  color: rgb(111, 198, 232);
 }
 
 .row5 {
   font-size: 2rem;
   font-weight: 300;
-  background: url("./static/6.png") center center/cover;
+  background: rgb(96, 171, 209);
   width: auto;
-  color: whitesmoke;
+  color: rgb(111, 198, 232);
 }
 
 .row1 div {
@@ -98,7 +98,7 @@ h4 {
 
 #your-box {
   border-right: black solid 1px;
-  color: rgb(0, 0, 0);
+  color: rgb(252, 197, 57);
 }
 
 #your-box img,
@@ -106,7 +106,7 @@ h4 {
   height: 20rem;
   width: 13rem;
   padding: 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(252, 197, 57);
 }
 
 .row2 {
@@ -146,12 +146,12 @@ h4 {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   margin: 1rem;
-  background-color: #000000;
+  background-color: #efd042;
 }
 
 .buttons button:hover {
   cursor: pointer;
-  box-shadow: black 0px 0px 5px 2px;
+  box-shadow: rgb(228, 225, 47) 0px 0px 5px 2px;
 }
 
 .buttons2 {
@@ -199,7 +199,7 @@ td {
   font-weight: 300;
   padding-left: 2.7rem;
   padding-right: 2.7rem;
-  color: rgb(255, 255, 255);
+  color: rgb(111, 198, 232);
   background-color: #1a1a1a;
 }
 
@@ -294,8 +294,8 @@ table {
 
 #resultField2 {
   margin: 5px;
-  color: #ffffff;
-  background-color: #1a1a1a;
+  color: #041a1f;
+  background-color: #6cafcf;
   top: 100%;
   left: 100%;
   font-family: "Ubuntu", sans-serif;

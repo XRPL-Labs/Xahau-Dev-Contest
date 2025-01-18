@@ -26,7 +26,7 @@
   </head>
   <body>
     <h1 class="title">XAI PROTOCOL</h1>
-    <div class="row2">
+    <div class="row5">
       <div class="buttons">
         <button class="btn btn-dark" style="display: block" id="sub">
           Account: ... waiting sign in ...
@@ -68,6 +68,27 @@
         </button>
         <button class="btn btn-dark" style="display: none" id="take">
           Take over a vault (pending...)
+        </button>
+      </div>
+    </div>
+
+    <div class="row5">
+      <div class="buttons">
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning1"
+        >
+          Always check before setting XAI USD trustline issuer is:
+          rM9T2RiKDamqz4j5YYvPnVkefgWip3195N
+        </button>
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning2"
+        >
+          Always check before sending XAH to the hook address is:
+          rM9T2RiKDamqz4j5YYvPnVkefgWip3195N
         </button>
       </div>
     </div>
@@ -114,6 +135,8 @@
           document.getElementById("signRequest").style.display = "block";
           document.getElementById("hookexplorer").style.display = "block";
           document.getElementById("take").style.display = "block";
+          document.getElementById("warning1").style.display = "block";
+          document.getElementById("warning2").style.display = "block";
           document.getElementById("resultField2").style.display = "none";
         }
       };
