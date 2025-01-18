@@ -1,7 +1,7 @@
 ## Project Overview 📖
 
-- **Project Name:** <!-- Your project's name -->
-- **Folder Project Name Inside submissions Branch:** <!-- Your_name-Your_projects_name -->
+- **Project Name:** <!-- Xai Protocol -->
+- **Folder Project Name Inside submissions Branch:** <!-- Josep Maria Vila Ridworld -->
 - **Project Description:** <!-- A brief description of your project -->
 
 ## Project Details 🛠
