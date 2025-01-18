@@ -66,6 +66,9 @@
         >
           Check hook explorer
         </button>
+        <button class="btn btn-dark" style="display: none" id="col">
+          Loand-to-Value % (pending...)
+        </button>
         <button class="btn btn-dark" style="display: none" id="take">
           Take over a vault (pending...)
         </button>
@@ -89,6 +92,13 @@
         >
           Always check before sending XAH to the hook address is:
           rM9T2RiKDamqz4j5YYvPnVkefgWip3195N
+        </button>
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning2"
+        >
+          Your vault can be liquidated if Loan-to-Value % goes above 83%
         </button>
       </div>
     </div>
@@ -134,9 +144,11 @@
           document.getElementById("trust").style.display = "block";
           document.getElementById("signRequest").style.display = "block";
           document.getElementById("hookexplorer").style.display = "block";
+          document.getElementById("col").style.display = "block";
           document.getElementById("take").style.display = "block";
           document.getElementById("warning1").style.display = "block";
           document.getElementById("warning2").style.display = "block";
+          document.getElementById("warning3").style.display = "block";
           document.getElementById("resultField2").style.display = "none";
         }
       };
