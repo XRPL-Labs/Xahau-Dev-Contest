@@ -11,7 +11,7 @@
   - **Project Description**
   - **Instructions on How to Use the Project**
   - **Integration Details for Xahau Hooks**
-  - 
+    
 ## Introduction
 
 Xai hook protocol provides an automated way to issue and redeem XAI USD, an over-collateralised stablecoin backed with XAH.
