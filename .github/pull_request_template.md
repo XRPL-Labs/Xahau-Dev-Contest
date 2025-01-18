@@ -2,7 +2,7 @@
 
 - **Project Name:** Xai Protocol
 - **Folder Project Name Inside submissions Branch:** Josep Maria Vila Ridworld
-- **Project Description:** <!-- A brief description of your project -->
+- **Project Description:** Xai Protocol is an oracle based stablecoin hook on the Xahau network. Xai hook provides an automated way to issue and redeem XAI USD, an over-collateralised stablecoin backed with XAH.
 
 ## Project Details 🛠
 
