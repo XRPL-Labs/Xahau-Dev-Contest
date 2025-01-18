@@ -25,10 +25,10 @@ Explain how your project leverages Xahau or integrates Hooks. Provide details th
 Submissions will be shared and amplified by the @XahauNetwork account, giving your work additional visibility within the community.
 - [ ] **First Mandatory Tweet** announcing your participation:
 
-  - **Link to Tweet:** [Insert the link to your announcement tweet here]
+  - **Link to Tweet:** [https://x.com/ainittomai/status/1878919910472270251]
 
   **Example Tweet:**
-  > We are participating in the Build on Xahau contest! Learn about our project here: [Project Link]
+  > We are participating in the Build on Xahau contest! Learn about our project here: [https://github.com/JosepMariaVila/XAI-PROTOCOL]
 
 - [ ] **Second Mandatory Tweet** upon submission for final review:
 
