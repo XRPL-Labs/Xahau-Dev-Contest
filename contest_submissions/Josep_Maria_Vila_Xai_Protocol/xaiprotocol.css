@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #ce91e2;
+
+  /* 10px and default 1rem=16px */
+}
+
+.title {
+  text-align: center;
+  background: rgb(96, 171, 209);
+  background: linear-gradient(
+    0deg,
+    rgb(240, 193, 228) 0%,
+    rgb(144, 179, 250) 20%
+  );
+  color: rgb(0, 0, 0);
+  /* font-family: 'Lobster', cursive; */
+  /*font-family: "Pushster", cursive;*/
+  font-family: "Ubuntu", sans-serif;
+  padding: 1rem;
+  font-size: 4rem;
+  word-spacing: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+#command {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  word-spacing: 1rem;
+  animation: blinker 2s step-start infinite;
+  color: #ffff00;
+  background: rgba(0, 0, 0, 0);
+}
+@keyframes blinker {
+  25% {
+    opacity: 0;
+  }
+}
+
+.main {
+  margin: auto;
+  text-align: center;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  border-bottom: black solid 0.1rem;
+  height: 50rem;
+}
+
+.row1 {
+  background: url("./static/6.png") no-repeat center bottom/cover;
+  width: auto;
+  color: rgb(0, 0, 0);
+}
+
+.row2 {
+  font-size: 2rem;
+  font-weight: 300;
+  background: url("./static/6.png") center center/cover;
+  width: auto;
+  color: rgb(111, 198, 232);
+}
+
+.row5 {
+  font-size: 2rem;
+  font-weight: 300;
+  background: rgb(96, 171, 209);
+  width: auto;
+  color: rgb(111, 198, 232);
+}
+
+.row1 div {
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+}
+
+.row1 h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 4rem;
+}
+
+h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+}
+
+#your-box {
+  border-right: black solid 1px;
+  color: rgb(252, 197, 57);
+}
+
+#your-box img,
+#dealer-box img {
+  height: 20rem;
+  width: 13rem;
+  padding: 1rem;
+  color: rgb(252, 197, 57);
+}
+
+.row2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0rem;
+  font-weight: 300;
+}
+
+.row5 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0rem;
+  font-weight: 300;
+}
+/*
+.row3 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0rem;
+}*/
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+}
+
+.buttons button {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  margin: 1rem;
+  background-color: #efd042;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  box-shadow: rgb(228, 225, 47) 0px 0px 5px 2px;
+}
+
+.buttons2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.buttons2 button {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  margin: 1rem;
+  width: 30%;
+}
+
+.buttons2 button:hover {
+  cursor: pointer;
+  box-shadow: black 0px 0px 5px 2px;
+}
+
+/*
+.row3 h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 4rem;
+}
+
+.row3 {
+  margin: auto;
+}*/
+
+table,
+th,
+td {
+  padding: 0.4rem;
+  border: solid 1px black;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  padding-left: 2.7rem;
+  padding-right: 2.7rem;
+  color: rgb(111, 198, 232);
+  background-color: #1a1a1a;
+}
+
+table {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 740px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 30%;
+  }
+}
+/*
+.btn-group button {
+  background-color: dark;
+  border: 1px solid dark;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  /*float: left; 
+  font-family: "Ubuntu", sans-serif;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+/*
+#sub {
+  font-family: "Ubuntu", sans-serif;
+  top: 100%;
+  left: 100%;
+  font-size: 14px;
+}*/
+
+#auth {
+  font-family: "Ubuntu", sans-serif;
+  top: 100%;
+  left: 100%;
+  font-size: 28px;
+  animation: blinker 2s step-start infinite;
+}
+@keyframes blinker {
+  25% {
+    opacity: 0;
+  }
+}
+/*
+#bal {
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}*/
+/*
+#resultField {
+  margin: 5px;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}*/
+/*
+#logout {
+  font-family: "Ubuntu", sans-serif;
+  top: 100%;
+  left: 100%;
+  font-size: 14px;
+}
+
+#trust {
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}
+
+#signRequest {
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}*/
+
+#resultField2 {
+  margin: 5px;
+  color: #041a1f;
+  background-color: #6cafcf;
+  top: 100%;
+  left: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}

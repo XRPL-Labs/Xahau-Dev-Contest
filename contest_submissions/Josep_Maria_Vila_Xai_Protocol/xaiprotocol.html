@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Oooh+Baby&family=Pushster&family=Teko&family=Ubuntu:ital@1&family=Vujahday+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./xaiprotocol.css" />
+    <title>XAI PROTOCOL</title>
+    <style>
+      .main {
+        background-color: #ce91e2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">XAI PROTOCOL</h1>
+    <div class="row5">
+      <div class="buttons">
+        <button class="btn btn-dark" style="display: block" id="sub">
+          Account: ... waiting sign in ...
+        </button>
+        <button class="btn btn-dark" style="display: block" id="auth">
+          Click to Sign in
+        </button>
+        <button class="btn btn-dark" style="display: none" id="logout">
+          Logout
+        </button>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="buttons">
+        <button
+          class="btn btn-dark"
+          style="display: none"
+          id="trust"
+          onclick="window.open('https://xahau.services/?issuer=rM9T2RiKDamqz4j5YYvPnVkefgWip3195N&currency=USD&limit=10000000000', '_blank')"
+        >
+          Set XAI USD trustline
+        </button>
+        <button
+          class="btn btn-dark"
+          style="display: none"
+          id="signRequest"
+          onclick="window.open('https://skunk-proper-smoothly.ngrok-free.app/tools/xaiprotocol/qr.png', '_blank')"
+        >
+          Scan hook QR, send XAH, create loan
+        </button>
+        <button
+          class="btn btn-dark"
+          style="display: none"
+          id="hookexplorer"
+          onclick="window.open('https://xahau.xrplwin.com/account/rM9T2RiKDamqz4j5YYvPnVkefgWip3195N', '_blank')"
+        >
+          Check hook explorer
+        </button>
+        <button class="btn btn-dark" style="display: none" id="col">
+          Loand-to-Value % (pending...)
+        </button>
+        <button class="btn btn-dark" style="display: none" id="take">
+          Take over a vault (pending...)
+        </button>
+      </div>
+    </div>
+
+    <div class="row5">
+      <div class="buttons">
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning1"
+        >
+          Always check before setting XAI USD trustline issuer is:
+          rM9T2RiKDamqz4j5YYvPnVkefgWip3195N
+        </button>
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning2"
+        >
+          Always check before sending XAH to the hook address is:
+          rM9T2RiKDamqz4j5YYvPnVkefgWip3195N
+        </button>
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning4"
+        >
+          Sending XAH to the hook creates a XAI USD loan with Loan-to-Value 50%
+        </button>
+        <button
+          class="btn btn-warning btn-sm"
+          style="display: none"
+          id="warning3"
+        >
+          Your vault can be liquidated if Loan-to-Value % goes above 83%
+        </button>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div>
+        <table>
+          <textarea
+            id="resultField2"
+            style="display: none"
+            cols="40"
+            rows="4"
+          ></textarea>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://xumm.app/assets/cdn/xumm.min.js"></script>
+    <script src="https://xumm.app/assets/cdn/xumm-oauth2-pkce.min.js?v=2.7.1"></script>
+    <script src="https://unpkg.com/browse/@transia/xrpl@2.7.3-alpha.28/"></script>
+    <script src="./xaiprotocol.js"></script>
+    <script src="xrpl-latest-min.js"></script>
+    <script src="xrpl-latest.js"></script>
+
+    <script>
+      //Come on, don't empty the faucet or whatever similar, still figuring out how to hide the secret)
+
+      const xumm = new XummPkce("78d3a201-10a6-4e62-a7aa-c7b2462d4254", {
+        implicit: true,
+        redirectUrl: document.location.href + "?custom_state=test",
+      });
+
+      //SIGN IN
+      document.getElementById("auth").onclick = () =>
+        xumm.authorize().catch((e) => console.log("e", e));
+
+      const signedIn = async () => {
+        const state = await xumm.state();
+        if (state?.me?.sub) {
+          document.getElementById("auth").style.display = "none";
+          document.getElementById("sub").innerText = state.me.sub;
+          document.getElementById("logout").style.display = "block";
+          document.getElementById("trust").style.display = "block";
+          document.getElementById("signRequest").style.display = "block";
+          document.getElementById("hookexplorer").style.display = "block";
+          document.getElementById("col").style.display = "block";
+          document.getElementById("take").style.display = "block";
+          document.getElementById("warning1").style.display = "block";
+          document.getElementById("warning2").style.display = "block";
+          document.getElementById("warning4").style.display = "block";
+          document.getElementById("warning3").style.display = "block";
+          document.getElementById("resultField2").style.display = "none";
+        }
+      };
+
+      if (typeof module !== "undefined") {
+        // Use var here because const/let are block-scoped to the if statement.
+        var xrpl = require("xrpl");
+      }
+
+      async function main() {
+        const client = new xrpl.Client("wss://xahau.network");
+        console.log("Connecting to mainnet...");
+        await client.connect();
+        const enc = ama(inp);
+        const faucet_wallet = xrpl.Wallet.fromSeed(enc);
+        const currency_code = "RID";
+        const netw = 21337;
+        const state = await xumm.state();
+        //console.log(x);
+        var x = document.getElementById("wins").innerHTML;
+        if (x == 0) {
+          document.getElementById(
+            "resultField2"
+          ).value = `Your earnings are 0, you can't witdrwaw yet.`;
+          client.disconnect();
+          setTimeout(function () {
+            window.location.reload();
+          }, 4000);
+        }
+
+        const send_token_tx = {
+          TransactionType: "Payment",
+          Account: faucet_wallet.address,
+          Amount: {
+            currency: currency_code,
+            value: x,
+            issuer: "rMtaQuDMHiWpMzgiBNdHpK6b2dzsNr75kG",
+          },
+          Destination: state.me.sub,
+          NetworkID: netw,
+        };
+
+        const pay_prepared = await client.autofill(send_token_tx);
+        const pay_signed = faucet_wallet.sign(pay_prepared);
+
+        console.log(
+          `Earnings: ${x} S. Whitdrawing ${x} RID, wait a few seconds... Sending ${x} RID to ${state.me.sub}...`
+        );
+
+        document.getElementById(
+          "resultField2"
+        ).value = `Earnings: ${x} RID. Whitdrawing ${x} RID, wait a few seconds...`;
+
+        const pay_result = await client.submitAndWait(pay_signed.tx_blob);
+        if (pay_result.result.meta.TransactionResult == "tesSUCCESS") {
+          console.log(
+            `Transaction succeeded! https://xahau.xrplwin.com/tx/${pay_signed.hash}`
+          );
+          document.getElementById(
+            "resultField2"
+          ).value = `Transaction succeeded! https://xahau.xrplwin.com/tx/${pay_signed.hash}`;
+        } else {
+          document.getElementById(
+            "resultField2"
+          ).value = `Error sending transaction, remember that you need to have the RID trustline set to be able to receive RID: ${pay_result.result.meta.TransactionResult}`;
+          setTimeout(function () {
+            window.location.reload();
+          }, 9000);
+          console.log(pay_result);
+          throw `Error sending transaction, remember that you need to have the RID trustline set to be able to receive RID: ${pay_result.result.meta.TransactionResult}`;
+        }
+        client.disconnect();
+
+        setTimeout(function () {
+          window.location.reload();
+        }, 9000);
+        //document.getElementById("wins").innerHTML = 0;
+      }
+
+      //LOGOUT
+      document.getElementById("logout").onclick = () => {
+        xumm.logout();
+        window.location.reload();
+      };
+      xumm.on("error", (error) => console.log("error", error));
+      xumm.on("success", () => signedIn());
+      xumm.on("retrieved", () => signedIn());
+      // main();
+    </script>
+  </body>
+</html>
